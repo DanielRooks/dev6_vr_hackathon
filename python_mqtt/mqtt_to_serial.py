@@ -6,9 +6,19 @@ broker="broker.hivemq.com"
 broker="iot.eclipse.org"
 
 def on_message(client, userdata, message):
-    time.sleep(1)
+
+    seri.write(str(message.payload.decode("utf-8")))
     print("received message =",str(message.payload.decode("utf-8")))
     
+seri = serial.Serial(
+    port='/dev/ttyUSB1',
+    baudrate=9600,
+    parity=serial.PARITY_ODD,
+    stopbits=serial.STOPBITS_TWO,
+    bytesize=serial.SEVENBITS
+)
+
+seri.isOpen()
 
 client= paho.Client("client-001") #create client object client1.on_publish = on_publish #assign function to callback client1.connect(broker,port) #establish connection client1.publish("house/bulb1","on")
 client.on_message=on_message
@@ -28,3 +38,4 @@ while True:
 
 client.disconnect() #disconnect
 client.loop_stop() #stop loop
+seri.close()
