@@ -1,0 +1,22 @@
+But let's see if we get that far
+So right now top idea just so everyone is onboard
+Is robot with a 360 camera on it live streaming to VR headset
+The VR controller should control the robot
+@Carina Yang
+ also suggested a auto explore mode that would work
+The upcoming tasks I see is first making sure Ryan is onboarded on how we did the whole communication thing with mqtt
+On unity
+Then Paige can maybe start looking into unity to Facebook live
+For hardware we will make sure Arduino works first
+Then we can upgrade to particle board
+Once we can input controls
+Then we can add other sensors like ultra Sonic sensors to do the whole auto explore thing
+If for some magical reason we finish all of this early
+We can look into creating a informative overlay on the VR system
+So that we can add sensors to the robot
+And relay that info to the robot
+Also if we magically finish all of thet
+That
+I got a robot arm we can strap on to the car
+So plenty of extra work
+I only expect us to get robot car and camera
